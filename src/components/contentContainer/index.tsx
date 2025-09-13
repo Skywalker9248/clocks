@@ -26,6 +26,7 @@ const ContentContainerDiv = styled.div`
 `;
 
 const StyledTabs = styled(Tabs)`
+  color: ${({ theme }) => theme.tabText};
     font-weight: 600;
   &&& {
     --bs-nav-tabs-link-active-bg: ${({ theme }) => theme.tabActiveBackground};
@@ -37,6 +38,7 @@ const StyledTabs = styled(Tabs)`
     
     .nav-tabs {
       border-bottom: 1px solid ${({ theme }) => theme.tabBorder};
+      color: ${({ theme }) => theme.tabText};
       
       .nav-link {
         color: ${({ theme }) => theme.tabText} !important;

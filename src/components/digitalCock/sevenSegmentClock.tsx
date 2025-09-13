@@ -42,20 +42,37 @@ const Colon = () => (
 );
 
 const SegmentContainer = styled.div`
+  margin-top: 1rem;
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  justify-content: center;
+  gap: 0.25rem;
   background-color: #000;
-  padding: 1rem 2rem;
-  border-radius: 10px;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
   box-shadow: 0 0 20px #e60000;
+  max-width: 100%;
+  overflow-x: auto;
+  
+  @media (min-width: 480px) {
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+  }
 `;
 
 const DigitContainer = styled.div`
   position: relative;
-  width: 60px;
-  height: 100px;
-  margin: 0 5px;
+  width: 40px;
+  height: 70px;
+  margin: 0 2px;
+  flex-shrink: 0;
+  
+  @media (min-width: 480px) {
+    width: 60px;
+    height: 100px;
+    margin: 0 5px;
+  }
 `;
 
 const Segment = styled.div<{ $active: boolean }>`
@@ -67,59 +84,109 @@ const Segment = styled.div<{ $active: boolean }>`
   /* Horizontal segments */
   &.segment-a {
     top: 0;
-    left: 10px;
-    width: 40px;
-    height: 8px;
-    border-radius: 4px;
+    left: 7px;
+    width: 26px;
+    height: 6px;
+    border-radius: 3px;
+    
+    @media (min-width: 480px) {
+      left: 10px;
+      width: 40px;
+      height: 8px;
+      border-radius: 4px;
+    }
   }
 
   &.segment-g {
-    top: 46px;
-    left: 10px;
-    width: 40px;
-    height: 8px;
-    border-radius: 4px;
+    top: 32px;
+    left: 7px;
+    width: 26px;
+    height: 6px;
+    border-radius: 3px;
+    
+    @media (min-width: 480px) {
+      top: 46px;
+      left: 10px;
+      width: 40px;
+      height: 8px;
+      border-radius: 4px;
+    }
   }
 
   &.segment-d {
     bottom: 0;
-    left: 10px;
-    width: 40px;
-    height: 8px;
-    border-radius: 4px;
+    left: 7px;
+    width: 26px;
+    height: 6px;
+    border-radius: 3px;
+    
+    @media (min-width: 480px) {
+      left: 10px;
+      width: 40px;
+      height: 8px;
+      border-radius: 4px;
+    }
   }
 
   /* Vertical segments */
   &.segment-b {
-    top: 8px;
+    top: 6px;
     right: 0;
-    width: 8px;
-    height: 40px;
-    border-radius: 4px;
+    width: 6px;
+    height: 28px;
+    border-radius: 3px;
+    
+    @media (min-width: 480px) {
+      top: 8px;
+      width: 8px;
+      height: 40px;
+      border-radius: 4px;
+    }
   }
 
   &.segment-c {
-    bottom: 8px;
+    bottom: 6px;
     right: 0;
-    width: 8px;
-    height: 40px;
-    border-radius: 4px;
+    width: 6px;
+    height: 28px;
+    border-radius: 3px;
+    
+    @media (min-width: 480px) {
+      bottom: 8px;
+      width: 8px;
+      height: 40px;
+      border-radius: 4px;
+    }
   }
 
   &.segment-e {
-    bottom: 8px;
+    bottom: 6px;
     left: 0;
-    width: 8px;
-    height: 40px;
-    border-radius: 4px;
+    width: 6px;
+    height: 28px;
+    border-radius: 3px;
+    
+    @media (min-width: 480px) {
+      bottom: 8px;
+      width: 8px;
+      height: 40px;
+      border-radius: 4px;
+    }
   }
 
   &.segment-f {
-    top: 8px;
+    top: 6px;
     left: 0;
-    width: 8px;
-    height: 40px;
-    border-radius: 4px;
+    width: 6px;
+    height: 28px;
+    border-radius: 3px;
+    
+    @media (min-width: 480px) {
+      top: 8px;
+      width: 8px;
+      height: 40px;
+      border-radius: 4px;
+    }
   }
 `;
 
@@ -127,16 +194,27 @@ const ColonContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  height: 100px;
-  margin: 0 10px;
+  height: 70px;
+  margin: 0 5px;
+  
+  @media (min-width: 480px) {
+    height: 100px;
+    margin: 0 10px;
+  }
 `;
 
 const ColonDot = styled.div`
-  width: 8px;
-  height: 8px;
+  width: 6px;
+  height: 6px;
   background-color: #e60000;
   border-radius: 50%;
-  box-shadow: 0 0 10px #ff0000;
+  box-shadow: 0 0 8px #ff0000;
+  
+  @media (min-width: 480px) {
+    width: 8px;
+    height: 8px;
+    box-shadow: 0 0 10px #ff0000;
+  }
 `;
 
 export default SevenSegmentClock;
