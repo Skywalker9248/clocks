@@ -7,6 +7,7 @@ export const lightTheme = {
   tabActiveText: '#000000',
   tabBorder: '#dee2e6',
   tabHoverBackground: '#f8f9fa',
+  button: '#2563eb',
 }
 
 export const darkTheme = {
@@ -18,6 +19,7 @@ export const darkTheme = {
   tabActiveText: '#ffffff',
   tabBorder: '#4a5568',
   tabHoverBackground: '#3a4552',
+  button: '#111827',
 }
 
 export type ThemeType = typeof lightTheme

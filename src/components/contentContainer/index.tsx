@@ -14,9 +14,9 @@ const ContentContainer = () => {
         <Tab eventKey="analog" title="Block Clock">
             <BlockClock />
         </Tab>
-        <Tab eventKey="other" title="Other">
+        {/* <Tab eventKey="other" title="Other">
             <h2>Other</h2>
-        </Tab>
+        </Tab> */}
       </StyledTabs>
     </ContentContainerDiv>
   );
