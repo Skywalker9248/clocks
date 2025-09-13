@@ -1,6 +1,7 @@
 import { Tab, Tabs } from "react-bootstrap";
 import { styled } from "styled-components";
 import DigitalClock from "../digitalCock";
+import BlockClock from "../blockClock";
 
 const ContentContainer = () => {
   return (
@@ -10,8 +11,8 @@ const ContentContainer = () => {
         <Tab eventKey="digital" title="Digital Clock">
             <DigitalClock />
         </Tab>
-        <Tab eventKey="analog" title="Analog Clock">
-            <h2>Analog Clock</h2>
+        <Tab eventKey="analog" title="Block Clock">
+            <BlockClock />
         </Tab>
         <Tab eventKey="other" title="Other">
             <h2>Other</h2>

@@ -110,24 +110,4 @@ const StyledOption = styled.option`
   }
 `;
 
-const DropdownIcon = styled.div`
-  position: absolute;
-  right: 12px;
-  top: 50%;
-  transform: translateY(-50%);
-  pointer-events: none;
-  color: #e60000;
-  font-size: 12px;
-  transition: transform 0.3s ease;
-
-  ${StyledSelect}:focus + & {
-    transform: translateY(-50%) rotate(180deg);
-  }
-
-  @media (max-width: 480px) {
-    right: 10px;
-    font-size: 10px;
-  }
-`;
-
 export default DigitalClock;
