@@ -2,13 +2,44 @@ import { styled } from 'styled-components';
 import { useClock } from '../../hooks/useClocks';
 import { DIGITS } from './utils';
 
+function DotMatrixDigit({ digit }: { digit: string }) {
+  const matrix = DIGITS[digit as keyof typeof DIGITS];
+
+  return (
+    <DigitContainer>
+      {matrix.map((row, rowIndex) => (
+        <DotRow key={rowIndex}>
+          {row.map((dot, colIndex) => (
+            <Dot
+              key={colIndex}
+              $isOn={!!dot}
+            />
+          ))}
+        </DotRow>
+      ))}
+    </DigitContainer>
+  );
+}
+
+function DotMatrixClock() {
+  const time = useClock()
+
+  return (
+    <DotMatrixContainer>
+      {time.split('').map((char, index) => (
+        <DotMatrixDigit key={index} digit={char} />
+      ))}
+    </DotMatrixContainer>
+  );
+}
+
 const DotMatrixContainer = styled.div`
   display: flex;
   gap: clamp(8px, 1.5vw, 20px);
   justify-content: center;
   align-items: center;
   padding: clamp(12px, 2vw, 24px);
-  background: ${({ theme }) => theme.background};
+  background: black;
   border-radius: 12px;
   width: 100%;
   max-width: 95vw;
@@ -94,33 +125,4 @@ const Dot = styled.div<{ $isOn: boolean }>`
   }
 `;
 
-function DotMatrixDigit({ digit }: { digit: string }) {
-  const matrix = DIGITS[digit as keyof typeof DIGITS];
-
-  return (
-    <DigitContainer>
-      {matrix.map((row, rowIndex) => (
-        <DotRow key={rowIndex}>
-          {row.map((dot, colIndex) => (
-            <Dot
-              key={colIndex}
-              $isOn={!!dot}
-            />
-          ))}
-        </DotRow>
-      ))}
-    </DigitContainer>
-  );
-}
-
-export default function DotMatrixClock() {
-  const time = useClock()
-
-  return (
-    <DotMatrixContainer>
-      {time.split('').map((char, index) => (
-        <DotMatrixDigit key={index} digit={char} />
-      ))}
-    </DotMatrixContainer>
-  );
-}
+export default DotMatrixClock;
