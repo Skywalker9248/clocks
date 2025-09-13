@@ -53,7 +53,7 @@ const SegmentContainer = styled.div`
   box-shadow: 0 0 20px #e60000;
   max-width: 100%;
   overflow-x: auto;
-  
+
   @media (min-width: 480px) {
     gap: 0.5rem;
     padding: 1rem 2rem;
@@ -67,7 +67,7 @@ const DigitContainer = styled.div`
   height: 70px;
   margin: 0 2px;
   flex-shrink: 0;
-  
+
   @media (min-width: 480px) {
     width: 60px;
     height: 100px;
@@ -88,7 +88,7 @@ const Segment = styled.div<{ $active: boolean }>`
     width: 26px;
     height: 6px;
     border-radius: 3px;
-    
+
     @media (min-width: 480px) {
       left: 10px;
       width: 40px;
@@ -103,7 +103,7 @@ const Segment = styled.div<{ $active: boolean }>`
     width: 26px;
     height: 6px;
     border-radius: 3px;
-    
+
     @media (min-width: 480px) {
       top: 46px;
       left: 10px;
@@ -119,7 +119,7 @@ const Segment = styled.div<{ $active: boolean }>`
     width: 26px;
     height: 6px;
     border-radius: 3px;
-    
+
     @media (min-width: 480px) {
       left: 10px;
       width: 40px;
@@ -135,7 +135,7 @@ const Segment = styled.div<{ $active: boolean }>`
     width: 6px;
     height: 28px;
     border-radius: 3px;
-    
+
     @media (min-width: 480px) {
       top: 8px;
       width: 8px;
@@ -150,7 +150,7 @@ const Segment = styled.div<{ $active: boolean }>`
     width: 6px;
     height: 28px;
     border-radius: 3px;
-    
+
     @media (min-width: 480px) {
       bottom: 8px;
       width: 8px;
@@ -165,7 +165,7 @@ const Segment = styled.div<{ $active: boolean }>`
     width: 6px;
     height: 28px;
     border-radius: 3px;
-    
+
     @media (min-width: 480px) {
       bottom: 8px;
       width: 8px;
@@ -180,7 +180,7 @@ const Segment = styled.div<{ $active: boolean }>`
     width: 6px;
     height: 28px;
     border-radius: 3px;
-    
+
     @media (min-width: 480px) {
       top: 8px;
       width: 8px;
@@ -196,7 +196,7 @@ const ColonContainer = styled.div`
   justify-content: space-around;
   height: 70px;
   margin: 0 5px;
-  
+
   @media (min-width: 480px) {
     height: 100px;
     margin: 0 10px;
@@ -209,7 +209,7 @@ const ColonDot = styled.div`
   background-color: #e60000;
   border-radius: 50%;
   box-shadow: 0 0 8px #ff0000;
-  
+
   @media (min-width: 480px) {
     width: 8px;
     height: 8px;

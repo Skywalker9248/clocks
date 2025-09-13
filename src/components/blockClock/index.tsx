@@ -3,7 +3,6 @@ import { useClock } from "../../hooks/useClocks"; // Your existing hook
 import { digitMap } from "./utils";
 import { useState } from "react";
 
-
 const getDigitIndex = (value: string, type: string): number =>
   digitMap[type].indexOf(value);
 
@@ -12,7 +11,11 @@ interface BlockDigitProps {
   type: string;
 }
 
-const BlockDigit = ({ value, type, showHiddenList }: BlockDigitProps & { showHiddenList: boolean }) => {
+const BlockDigit = ({
+  value,
+  type,
+  showHiddenList,
+}: BlockDigitProps & { showHiddenList: boolean }) => {
   const index = getDigitIndex(value, type);
   const digits = digitMap[type];
 
@@ -85,7 +88,6 @@ const ShowListButton = styled.button`
     transform: scale(0.97); /* click feedback */
   }
 `;
-
 
 const ClockWrapper = styled.div`
   display: flex;

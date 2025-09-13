@@ -50,6 +50,7 @@ const DropdownContainer = styled.div`
   display: inline-block;
   margin-bottom: 2rem;
   max-width: 300px;
+  margin-left: 20px;
 `;
 
 const StyledSelect = styled.select`
@@ -62,7 +63,7 @@ const StyledSelect = styled.select`
   font-weight: 500;
   color: ${({ theme }) => theme.text};
   background: ${({ theme }) => theme.background};
-  border: 2px solid ${({ theme }) => theme.tabBorder || '#333'};
+  border: 2px solid ${({ theme }) => theme.tabBorder || "#333"};
   border-radius: 12px;
   cursor: pointer;
   transition: all 0.3s ease;
